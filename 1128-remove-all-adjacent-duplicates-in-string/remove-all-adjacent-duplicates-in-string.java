@@ -1,5 +1,5 @@
 class Solution {
-    //megha
+    //megha0
     public String removeDuplicates(String s) {
         StringBuilder sb = new StringBuilder();
         for (char c : s.toCharArray()) {
