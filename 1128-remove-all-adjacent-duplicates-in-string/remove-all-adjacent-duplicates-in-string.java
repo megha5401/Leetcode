@@ -1,13 +1,15 @@
 class Solution {
     //megha0
     public String removeDuplicates(String s) {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder res = new StringBuilder();
         for (char c : s.toCharArray()) {
-            if (sb.length() > 0 && sb.charAt(sb.length() - 1) == c) {
-                sb.deleteCharAt(sb.length() - 1);
+            int len = res.length();
+            if (len > 0 && res.charAt(len - 1) == c) {
+                res.deleteCharAt(len - 1); 
+            } else {
+                res.append(c);
             }
-            else sb.append(c);
         }
-        return sb.toString();
+        return res.toString();
     }
 }
