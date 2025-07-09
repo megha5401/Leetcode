@@ -16,14 +16,14 @@ class Solution {
         }
         ListNode odd = head;
         ListNode even = head.next;
-        ListNode evenHead = even; // Save the head of the even list
+        ListNode evenHead = even; 
         while (even != null && even.next != null) {
-            odd.next = even.next; // Link to the next odd node
-            odd = odd.next;       // Move odd pointer
-            even.next = odd.next; // Link to the next even node
-            even = even.next;     // Move even pointer
+            odd.next = even.next; 
+            odd = odd.next;      
+            even.next = odd.next; 
+            even = even.next;    
         }
-        odd.next = evenHead; // Join even list at the end of odd list
+        odd.next = evenHead; 
         return head;  
     }
 }
